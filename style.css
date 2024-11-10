@@ -1,0 +1,66 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container for the game */
+.container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Score display */
+#score {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Game board setup */
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Style for each card */
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #ff3d3d;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-size: 32px;
+  color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Style for the front of the card */
+.card img {
+  max-width: 90%;
+  max-height: 90%;
+  display: none;
+}
+
+/* Style when card is flipped */
+.card.flipped {
+  background-color: #c2c2c2;
+}
+
+.card.flipped img {
+  display: block;
+}
+
+/* Message when cards do not match */
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: red;
+}
